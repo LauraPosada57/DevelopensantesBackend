@@ -45,3 +45,16 @@ exports.delete = function(req, res) {
         }
     });
 }
+
+exports.update = function(req, res) {
+    console.log("user to update", req.params.id)
+
+    User.update(req.params.id, new User(req.body), function(err, user) {
+     if (err) {
+        res.send(err);
+     } else {
+        res.json({ error:false, message: 'User successfully updated' });
+     }
+    });
+  
+  }

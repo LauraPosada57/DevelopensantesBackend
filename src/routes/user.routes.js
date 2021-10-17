@@ -10,5 +10,7 @@ router.post('/', userController.create);
 
 router.delete('/:id', userController.delete);
 
+router.put('/:id', userController.update);
+
 
 module.exports = router;
