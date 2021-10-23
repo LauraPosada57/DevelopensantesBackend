@@ -15,7 +15,6 @@ User.create = function (newUser, result) {
             result(err, null);
         }
         else{
-            console.log(`user created ${res.insertId}`)
             result(null, res.insertId);
         }
     });
@@ -40,7 +39,6 @@ User.findAll = function (result) {
             result(null, err);
         }
         else{
-            console.log(`All users ${res}`);
             result(null, res);
         }
     });
@@ -54,7 +52,6 @@ User.delete = function (idUser, result) {
             result(err, null);
         }
         else{
-            console.log(res);
             result(null, res);
         }
     });
