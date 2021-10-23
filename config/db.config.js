@@ -5,8 +5,8 @@ const mysql = require('mysql');
 //local mysql db connection
 const dbConn = mysql.createConnection({
     host     : 'localhost',
-    user     : 'admin',
-    password : 'password123',
+    user     : 'root',
+    password : '',
     database : 'aromacafe'
   });
 

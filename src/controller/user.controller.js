@@ -3,7 +3,7 @@
 const User = require('../model/user.model');
 
 
-exports.create = function(req, res) {    
+exports.create = function(req, res) {
     const user = new User(req.body);
 
     console.log("user to insert", user)
@@ -19,20 +19,20 @@ exports.create = function(req, res) {
 
 exports.findAll = function(req, res) {
 
-    User.findAll(function(err, products) {
+    User.findAll(function(err, users) {
 
         console.log("in the controller");
 
         if (err) {
             res.send(err);
         } else {
-            console.log("Finded: ", products)
-            res.send(products);
+            console.log("Finded: ", users)
+            res.send(users);
         }
     });
 }
 
-exports.delete = function(req, res) {    
+exports.delete = function(req, res) {
     const idUser = req.params.id;
 
     console.log("product to delete", idUser)
@@ -44,4 +44,8 @@ exports.delete = function(req, res) {
             res.json({error: false, message: "User deleted sucessfully", data: deleteUser});
         }
     });
+}
+
+exports.googleLogin = function (req, res){
+    res.json({error: false, message: "Inicio de sesión exitoso", });
 }
