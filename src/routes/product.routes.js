@@ -3,6 +3,7 @@ const express = require('express')
 const router = express.Router()
 
 const productController =   require('../controller/product.controller');
+const {verifyUser, verifyAdmin} = require("../middlewares/auth");
 
 router.get('/', productController.findAll);
 
