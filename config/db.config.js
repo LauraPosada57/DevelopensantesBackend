@@ -1,4 +1,4 @@
-'use strict';
+/* 'use strict';
 
 const mysql = require('mysql');
 
@@ -15,4 +15,4 @@ dbConn.connect(function(err) {
     console.log("Database Connected!");
 });
 
-module.exports = dbConn;
+module.exports = dbConn; */
