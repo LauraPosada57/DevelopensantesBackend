@@ -4,7 +4,9 @@ const User = require("../model/user.model");
 const client = new OAuth2Client(web.client_id)
 
 const admins = [
-    'alexhc718@gmail.com'
+    'jhonatanplac98@outlook.com',
+    'posadalaura57@gmail.com',
+    'jarolingles@gmail.com'
 ]
 
 
