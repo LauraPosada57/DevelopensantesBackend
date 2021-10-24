@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const port = 5000;
 
 const productRoutes = require('./src/routes/product.routes')
 const salesRoutes = require('./src/routes/sale.routes')
