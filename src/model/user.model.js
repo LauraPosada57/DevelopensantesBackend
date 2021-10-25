@@ -6,6 +6,7 @@ const User = function(user){
     this.email = user.email;
     this.imageUrl = user.imageUrl;
     this.role = user.role;
+    this.status = user.status;
 }
 
 User.create = function (newUser, result) {
@@ -58,8 +59,8 @@ User.delete = function (idUser, result) {
 };
 
 User.update = function(id, user, result){
-     dbConn.query("UPDATE users SET name=?,email=?,password=?,role=?,status=? WHERE id_user = ?",
-      [user.name,user.email,user.password,user.role, user.status, id], function (err, res) {
+     dbConn.query("UPDATE users SET name=?,email=?,role=?,status=? WHERE id_user = ?",
+      [user.name,user.email,user.role, user.status, id], function (err, res) {
      if(err) {
        console.log("error: ", err);
        result(null, err);
