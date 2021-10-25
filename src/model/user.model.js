@@ -57,16 +57,16 @@ User.delete = function (idUser, result) {
     });
 };
 
-// User.update = function(id, user, result){
-//     dbConn.query("UPDATE users SET name=?,email=?,password=?,role=?,status=? WHERE id_user = ?",
-//      [user.name,user.email,user.password,user.role, user.status, id], function (err, res) {
-//     if(err) {
-//       console.log("error: ", err);
-//       result(null, err);
-//     }else{
-//       result(null, res);
-//     }
-//     });
-// };
+User.update = function(id, user, result){
+     dbConn.query("UPDATE users SET name=?,email=?,password=?,role=?,status=? WHERE id_user = ?",
+      [user.name,user.email,user.password,user.role, user.status, id], function (err, res) {
+     if(err) {
+       console.log("error: ", err);
+       result(null, err);
+     }else{
+       result(null, res);
+     }
+     });
+ };
 
 module.exports= User;
