@@ -18,7 +18,7 @@ exports.verifyUser = async function (req, res, next) {
                 audience: web.client_id
             }
         )
-        const payload = ticket.getPayload();
+        const payload = await ticket.getPayload();
         const {email_verified, sub: id_user, name, picture: imageUrl, email } = payload;
         let role = 'client'
         if (admins.includes(email)){
